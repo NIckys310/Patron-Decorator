@@ -1,3 +1,5 @@
+package com.game.model;
+
 // Interfaz base del componente principal
 public interface Character {
     int getAttack();
