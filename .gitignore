@@ -1,90 +1,91 @@
-##############################
-## Java
-##############################
+# ==============================================================================
+# JAVA & COMPILACIÓN
+# ==============================================================================
+*.class
+*.log
+*.ctxt
 .mtj.tmp/
-*.clase
-*.frasco
-*.guerra
-*.oreja
-*.nar
 hs_err_pid*
 replay_pid*
 
-##############################
-## Maven
-##############################
-objetivo/
+# Archivos empaquetados (Opcional: descomenta si no quieres guardar dependencias pesadas)
+# *.jar
+# *.war
+# *.nar
+# *.ear
+
+# ==============================================================================
+# GESTORES DE DEPENDENCIAS Y CONSTRUCCIÓN
+# ==============================================================================
+# Maven
+target/
 pom.xml.tag
 pom.xml.releaseBackup
-Copia de seguridad de pom.xml.versions
+pom.xml.versionsBackup
 pom.xml.next
-pom.xml.bak
-propiedades de lanzamiento
+release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
+timing.properties
 
-##############################
-## Gradle
-##############################
-papelera/
-construir/
-.gradle
-.gradletasknamecache
-gradle-app.setting
-!gradle-wrapper.jar
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
-##############################
-## IntelliJ
-##############################
-afuera/
+# ==============================================================================
+# ENVIROMENT / IDES
+# ==============================================================================
+# IntelliJ IDEA
 .idea/
-.idea_modules/
+*.iws
 *.iml
 *.ipr
-*.iws
+out/
 
-##############################
-## Eclipse
-##############################
-.ajustes/
-papelera/
+# Eclipse
+.metadata/
+bin/
 tmp/
-.metadatos
-.ruta de clases
-.proyecto
 *.tmp
 *.bak
 *.swp
 *~.nib
-propiedades locales
+.settings/
 .loadpath
-.ruta de fábrica
+.project
+.classpath
+.factorypath
 
-##############################
-## NetBeans
-##############################
-nbproject/private/
-construir/
-nbbuild/
-distribución/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-
-##############################
-## Código de Visual Studio
-##############################
+# Visual Studio Code
 .vscode/
-.code-workspace
+!.vscode/extensions.json
+*.code-workspace
 
-##############################
-## OS X
-##############################
+# ==============================================================================
+# SISTEMAS OPERATIVOS
+# ==============================================================================
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.Trashes
 
-##############################
-## Misceláneas
-##############################
-*.registro
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.trash/
+.nfs*
