@@ -58,3 +58,56 @@ test/
 └── com/
     └── game/
         └── CharacterTest.java         # Pruebas Unitarias (JUnit 5)
+
+
+2. Patrón Builder
+¿Cómo funciona?
+El Builder soluciona el problema de tener constructores gigantescos con muchos parámetros. Permite construir objetos complejos paso a paso mediante métodos encadenados (fluent interface), decidiendo exactamente qué atributos (nombre, ataque, velocidad, vida) tendrá el personaje.
+
+Código de implementación
+Java
+
+el patron entra en la parte del codigo donde dice 
+package com.game.builder;
+
+import com.game.model.Character;
+import com.game.model.BaseWarrior;
+
+public class CharacterBuilder {
+    private String name = "Héroe por Defecto";
+    private int attack = 10;
+    private int speed = 5;
+    private int health = 100;
+
+    public CharacterBuilder setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public CharacterBuilder setAttack(int attack) {
+        this.attack = attack;
+        return this;
+    }
+
+    public CharacterBuilder setSpeed(int speed) {
+        this.speed = speed;
+        return this;
+    }
+
+    public CharacterBuilder setHealth(int health) {
+        this.health = health;
+        return this;
+    }
+
+    public Character build() {
+        BaseWarrior character = new BaseWarrior();
+        // Configura los valores en tu modelo base según corresponda
+        return character;
+    }
+}
+Commit asociado para Git
+Bash
+git add src/com/game/builder/
+git commit -m "feat(builder): añadir CharacterBuilder para la creación paso a paso de per
+
+el commit hecho por nicoll lopez 
