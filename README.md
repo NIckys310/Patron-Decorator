@@ -58,3 +58,32 @@ test/
 └── com/
     └── game/
         └── CharacterTest.java         # Pruebas Unitarias (JUnit 5)
+
+3. Patrón Prototype
+¿Cómo funciona?
+El patrón Prototype permite clonar objetos existentes (duplicar un personaje ya configurado o un set de buffs activo) en lugar de instanciarlos desde cero. Es muy útil en juegos para generar oleadas de enemigos idénticos o duplicar estados rápidamente.
+
+Código de implementación
+Java
+El patron entre desde
+
+package com.game.prototype;
+
+// Interfaz Prototype genérica
+public interface Prototype<T> {
+    T clone();
+}
+
+// Aplicación en los efectos o personajes del juego
+public abstract class EffectDecorator implements com.game.model.Character, Prototype<EffectDecorator> {
+    protected com.game.model.Character wrappedCharacter;
+
+    public EffectDecorator(com.game.model.Character character) {
+        this.wrappedCharacter = character;
+    }
+
+    @Override
+    public abstract EffectDecorator clone();
+}
+Commit asociado para Git
+
